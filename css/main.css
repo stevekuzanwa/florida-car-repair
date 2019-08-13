@@ -1,0 +1,2307 @@
+/***********************************************/
+/*************** GENERAL STYLES ****************/
+/***********************************************/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/******************************************************************/
+/*************** START: HEADER SECTION - HOME PAGE ****************/
+/******************************************************************/
+
+/** Navigation **/
+
+.navigation {
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent;
+    position: fixed;
+    top:0;
+}
+
+
+.header .navigation h1 {
+    float: left;
+    padding: 0 0 10px 10px;
+    font-size: 26px;
+    font-weight: bold;
+    z-index: 999;
+}
+
+.header .navigation h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/** Nav Menu **/
+
+.header .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.header .navigation ul li {
+    float: left;
+}
+
+.header .navigation ul li a:link,
+.header .navigation ul li a:visited {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.header .navigation ul li a:hover,
+.header .navigation ul li a:active {
+    color: #1583f0;
+}
+
+/** StickyNav with jQuery**/
+
+.is-sticky .navigation {
+    background-color:  #fff;
+    border-bottom: 1px solid #b5b2b2;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.is-sticky .navigation h1 a {
+    padding: 0 0 10px;
+    color: #34495e;
+}
+
+
+
+.is-sticky .navigation nav ul a:link, 
+.is-sticky .navigation  nav ul a:visited  {
+    color: #34495e;
+}
+
+.is-sticky .navigation nav ul a:hover, 
+.is-sticky .navigation nav ul a:active {
+    color: #1583f0; 
+}
+
+.is-sticky .navigation nav ul a.active {
+    background-color: #34495e;
+    color: #fff; 
+}
+
+
+/** Mobile Nav Menu Icon **/
+
+.mobileNavIcon {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -6px) ;
+    transform: rotate(45deg) translate(-7px, -6px) ;
+}
+
+.is-sticky .navigation .mobileNavIcon .bar1,
+.is-sticky .navigation .mobileNavIcon .bar2,
+.is-sticky .navigation .mobileNavIcon .bar3 {
+    background-color: #34495e;
+}
+
+
+/** BG Slides **/
+
+.header #home {
+    z-index: 1;
+	position: relative;
+    height: 650px;
+}
+
+.header .slides {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.header .slides .slide1 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.3))), url(../images/photos/home/bg-professional-mechanics.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)), url(../images/photos/home/bg-professional-mechanics.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+}
+
+.header .slides .slide2 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.4))), url(../images/photos/home/bg-repair-maintain-car.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(../images/photos/home/bg-repair-maintain-car.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 650px;
+}
+
+.header .slides .slide3 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.4))), url(../images/photos/home/bg-interior-exterior-vehicle-restoration.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(../images/photos/home/bg-interior-exterior-vehicle-restoration.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+}
+
+.header .slides .slide4 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.4))), url(../images/photos/home/bg-gets-you-back-on-the-road.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(../images/photos/home/bg-gets-you-back-on-the-road.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10%  10%;
+    height: 650px;
+}
+
+
+/** Header Subtitle ***/
+
+.header .title {
+    text-align: center;
+    font-size: 51px;
+    color: #fff;
+    width: 100%;
+    padding: 175px 20px  0;
+    background-color: transparent;
+}
+
+.header .details {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.15;
+}
+
+/** Button Area **/
+
+.header .buttons {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.header .buttons a:link,
+.header .buttons a:visited {
+    border: 2px solid #fff;
+    padding: 10px  16px;
+    font-weight: bold;
+    color: #fff;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s; 
+    cursor: pointer;
+    text-decoration: none;
+} 
+
+
+.header .buttons a:hover,
+.header .buttons a:active {
+	color: #34495e;
+    background-color: white;
+}
+
+
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    .header .slides .slide1,
+    .header .slides .slide2,
+    .header .slides .slide3,
+    .header .slides .slide4 {
+        height: 500px;
+    } 
+    
+    .header .title {
+        font-size: 41px;
+        width: 100%;
+        margin-top: 136px;
+        padding: 0 10px;
+    }
+
+    .header .details {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+        
+    /** Mobile Navigation **/
+    
+    .mobile-container {
+        padding: 0;
+    }
+
+
+    .mobileNavIcon {
+        display: block;    
+    }  
+
+    .navigation {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .header .navigation h1 {
+        font-size: 18px;
+        float: none;
+        color: #fff;
+        padding: 0 0 10px 15px;
+    }
+
+    
+    .header .navigation ul {
+        float: none;
+        display: none;
+        background-color: #34495e;
+    }
+    
+    .header .navigation ul li {
+       float: none;
+    }
+
+    .header .navigation ul li a:hover,
+    .header .navigation ul li a:active {
+        color: #000;
+    }
+    
+    .is-sticky .navigation h1 {
+        color: #34495e;
+    }
+
+    
+    .is-sticky .navigation ul {
+        background-color: #34495e;
+        border-top: 1px solid #b5b2b2;
+    }
+    
+    .is-sticky .navigation nav ul a:link, 
+    .is-sticky .navigation  nav ul a:visited  {
+        color: #fff;
+    }
+
+    .is-sticky .navigation nav ul a:hover, 
+    .is-sticky .navigation nav ul a:active {
+        color: #000;
+    }
+    
+    .is-sticky .navigation nav ul a.active {
+        color: #000; 
+    }
+    
+    .header .slides .slide1 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.3))), url(../images/photos/home/small-bg-professional-mechanics.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)), url(../images/photos/home/small-bg-professional-mechanics.jpg);
+    }
+
+    .header .slides .slide2 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.4))), url(../images/photos/home/small-bg-repair-maintain-car.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(../images/photos/home/small-bg-repair-maintain-car.jpg);
+    }
+
+    .header .slides .slide3 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.4))), url(../images/photos/home/bg-interior-exterior-vehicle-restoration.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(../images/photos/home/bg-interior-exterior-vehicle-restoration.jpg);
+    }
+
+    .header .slides .slide4 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.4))), url(../images/photos/home/small-bg-gets-you-back-on-the-road.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(../images/photos/home/small-bg-gets-you-back-on-the-road.jpg);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .header .title {
+        font-size: 31px;
+    }
+
+    .header .details {
+        font-size: 25px;
+    }
+    
+    .header .buttons {
+        padding: 0 10px;
+    }
+}
+
+
+@media only screen and (max-width: 350px) {
+    .header .navigation h1 {
+        font-size: 16px;
+    }
+    
+    .header .title {
+        font-size: 25px;
+    }
+
+    .header .details {
+        font-size: 20px;
+    }
+    
+    .header .buttons {
+        margin-top: 30px;
+    }
+    
+    .header .buttons a {
+        padding: 10px  16px;
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        text-align: center;
+    } 
+}
+
+
+
+
+/****************************************************************/
+/*************** END: HEADER SECTION - HOME PAGE ****************/
+/****************************************************************/
+
+
+
+
+/********************************************************************/
+/************** START: WHO WE ARE SECTION - HOME PAGE ***************/
+/********************************************************************/
+
+.who-we-are {
+  margin-top: 575px;
+  padding-top: 85px;
+  padding-bottom: 80px;
+}
+
+/** Who We Are Title **/
+
+.who-we-are .title {
+   font-size: 30px;
+   font-weight: bold;
+   margin-top: -7px;
+   
+}
+
+.who-we-are .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #34495e;
+   margin-top: 16px;
+}
+
+.who-we-are h2 {
+    margin-bottom: 28px; 
+}
+
+/** Whoe We Are Description **/
+
+.who-we-are p {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.who-we-are .btn-default {
+    color: #fff;
+    background-color: #34495e;
+    border-color: transparent;
+    border-radius: 0;
+    margin-top: 10px;
+}
+
+.who-we-are .btn {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+    border: 2px solid transparent;
+    border-radius: 0;
+}
+
+.who-we-are .btn:hover {
+    color: #34495e;
+    background-color: #fff;
+    border: 2px solid #34495e; 
+}
+
+/** POPUP - WHO WE ARE READ MORE CONTENT **/
+
+.lity-popup {
+  background: #fff;
+  max-width: 700px; 
+}
+
+.lity-popup img {
+    width: 100%;
+}
+
+
+.lity-popup P {
+   padding: 10px;
+   font-size: 16px;
+   line-height: 150%;
+}
+
+
+/*************** MEDIA QUERIES FOR THE WHO WE ARE SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    .who-we-are {
+      margin-top: 420px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 991px) {
+  .who-we-are .btn {
+     margin-bottom: 25px;
+   }
+
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .who-we-are  .title {
+       font-size: 25px;
+    }
+
+    .who-we-are  .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+}
+
+
+/******************************************************************/
+/************** END: WHO WE ARE SECTION - HOME PAGE ***************/
+/******************************************************************/
+
+
+
+
+
+/***********************************************************************/
+/************** START: WHY CHOOSE US SECTION - HOME PAGE ***************/
+/***********************************************************************/
+
+.why-choose-us {
+   background-color: #34495e;
+   color:#fff;
+   text-align: center;
+   padding-top: 75px;
+   padding-bottom: 75px;
+}
+
+/** Why Choose US Introduction **/
+
+.why-choose-us .title {
+   font-size: 30px;
+   font-weight: bold;
+   margin-top: 0;
+   margin-bottom: 28px;
+}
+
+.why-choose-us .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #fff;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.why-choose-us .col-md-4 h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.why-choose-us p {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+/*************** MEDIA QUERIES FOR THE WHY CHOOSE US SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 991px) {
+    
+    .why-choose-us  img {
+        margin-top: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .why-choose-us  .title {
+       font-size: 25px;
+    }
+
+    .why-choose-us  .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+}
+
+
+/***********************************************************************/
+/*************** END: WHY CHOOSE US SECTION - HOME PAGE ****************/
+/***********************************************************************/
+
+
+
+
+/******************************************************************/
+/************** START: SERVICES SECTION - HOME PAGE ***************/
+/******************************************************************/
+
+.services .container {
+   text-align: center;
+   padding-top: 75px;
+}
+
+/** Services Introduction **/
+
+.services .title {
+   font-size: 30px;
+   font-weight: bold;
+   margin-top: 0;
+   margin-bottom: 28px;
+}
+
+.services .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #34495e;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.services p {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 30px;
+}
+
+/** Services Details **/
+
+.services .service-summary {
+   float: left;
+   background-color: #34495e;
+   color: #fff;
+   width: 50%;
+   height: 550px;
+   padding: 115px   10px   0;
+   text-align: center;
+}
+
+
+/** Services Details Title **/
+
+.services .service-summary .title {
+   font-size: 30px;
+    margin-bottom: 40px; 
+}
+
+/** Services Details Description **/
+
+.services .service-summary p {
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 580px;
+    margin: 0 auto;
+   
+}
+
+.services .service-summary .btn-default {
+    color: #34495e;
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 0;
+    margin-top: 60px;
+}
+
+.services .service-summary .btn {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+    border: 2px solid transparent;
+    border-radius: 0;
+}
+
+.services .service-summary .btn:hover {
+    color: #fff;
+    background-color: #34495e;
+    border: 2px solid #fff; 
+}
+
+.services .service-image1,
+.services .service-image2 {
+   float: left;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top center;
+   background-color: #34495e;
+   width: 50%;
+   height: 550px;
+}
+
+.services .service-image1 {
+   background-image: url(../images/photos/home/mot-testing2.jpg);
+}
+
+.services .service-image2 {
+   background-image: url(../images/photos/home/repairs2.jpg);
+}
+
+/** View All Services **/
+
+.services .our-Services .btn  {
+    padding: 15px  25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0;
+    color: #fff;
+    background-color: #34495e;
+    border: 3px solid transparent;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top: 62px;
+    margin-bottom: 28px;
+}
+
+.services .our-Services .btn:hover {
+   background-color: #fff;
+   color: #34495e;
+   border: 3px solid #34495e;
+}
+
+/*************** MEDIA QUERIES FOR THE SERVICES SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 800px) {
+ 
+     .services .service-summary {
+      padding: 71px   2%   0;
+     }
+}
+
+
+@media only screen and (max-width: 680px) {
+   
+    .services .service-summary {
+       float: none;
+       width: 100%;
+       height: auto;
+       padding: 71px   10px   60px;
+    } 
+    
+    .services .service-summary .title {
+       margin-bottom: 18px; 
+    }
+    
+    
+    .services .service-image1,
+    .services .service-image2 {
+       float: none;
+       width: 100%;
+       height: 550px;
+    }
+    
+    /** View All Services **/
+    .services .view-all-services {
+       text-align: center;
+       padding-top: 0;
+    }
+    
+    
+    /** Using Flex Blox in order to display properly the elements **/
+    .services {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .services #flex-display1 {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    
+    .services #flex-display2 {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3;
+    }
+    
+    .services #flex-display3 {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+    
+    .services #flex-display4 {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+        order: 4;
+    }
+    
+    .services #flex-display5 {
+        -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+        order: 5;
+    }
+    
+    .services #flex-display6 {
+        -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+        order: 6;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    
+     .services .service-summary .title {
+       font-size: 25px;
+     }
+
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .services  .title {
+       font-size: 25px;
+    }
+
+    .services  .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    /** View All Services **/
+    .services .our-Services .btn  {
+        padding: 10px   12px;
+        font-size: 18px;
+    }
+    
+}
+
+/****************************************************************/
+/************** END: SERVICES SECTION - HOME PAGE ***************/
+/****************************************************************/
+
+
+
+
+/**********************************************************************/
+/************** START: TESTIMONIALS SECTION - HOME PAGE ***************/
+/**********************************************************************/
+
+.testimonials {
+   background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/home/bg-testimonials.jpg);
+   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/home/bg-testimonials.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: top center;
+   height: 460px;
+   color: #fff;
+   margin-top: 52px;
+}
+
+
+.testimonials p {
+    font-size: 16px;
+    text-align: center;
+    padding: 155px 10px 120px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 150%;
+   
+}
+
+
+/*************** MEDIA QUERIES FOR THE TESTIMONIALS SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 768px) {
+   .testimonials {
+     background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/home/small-bg-testimonials.jpg);
+     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/home/small-bg-testimonials.jpg); 
+   }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+   .testimonials .container p {
+       padding: 145px 10px 80px;
+   }
+}
+
+@media only screen and (max-width: 320px) {
+   .testimonials .container p {
+       padding: 120px 10px 80px;
+   }
+}
+
+/********************************************************************/
+/************** END: TESTIMONIALS SECTION - HOME PAGE ***************/
+/********************************************************************/
+
+
+
+/******************************************************************/
+/*************** START: FOOTER SECTION - HOME PAGE ****************/
+/******************************************************************/
+
+.footer {
+    font-size: 16px;
+}
+
+.footer  .copyright {
+    padding: 56px 0;
+}
+
+.footer .social-media {
+    padding: 47px 0;
+}
+
+
+/** Copyright **/
+.footer .copyright a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #34495e;
+}
+
+
+/** Social Media Icons **/
+.footer ul {
+    list-style-type: none;
+    float: right;
+}
+
+.footer ul li {
+    float: left;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #34495e;
+    background-color: #34495e;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    float: left;
+}
+
+.footer ul li a:hover {
+    background-color: #fff;
+    color: #34495e;
+    border: 1px solid #34495e;
+}
+
+/** Scroll To Top **/
+
+.scroll-to-top {
+     right:20px;
+     bottom:20px;
+     font-size: 25px;
+     padding: 5px 15px 10px;
+     background-color: #34495e;
+     color: #fff;
+     border: 1px solid #fff;
+     position:fixed;
+     text-decoration: none; 
+     -webkit-transition: .3s; 
+     transition: .3s;
+     display: none;
+}
+
+.scroll-to-top:hover {  
+     background-color: #1583f0;
+}
+
+/*************** MEDIA QUERIES FOR THE FOOTER SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 991px) {
+    
+    .footer .copyright, .footer .social-media {
+        text-align: center;
+     }
+    
+    .footer ul {
+        float: none;
+    }
+    
+     .footer ul li {
+         float: none;
+         text-align: center;
+         display: inline-block;
+    }
+    
+    .footer .copyright {
+        padding: 56px 0 10px;
+    }
+
+    .footer .social-media {
+        padding: 0  0  47px;
+    }
+    
+   
+}
+
+/******************************************************************/
+/*************** END: FOOTER SECTION - HOME PAGE ******************/
+/******************************************************************/
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************** END: HOME PAGE ********************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+/***************************************************************************************************************************/
+/***************************************************************************************************************************/
+/***************************************************************************************************************************/
+/************************************************ START: ABOUT PAGE ********************************************************/
+/***************************************************************************************************************************/
+/***************************************************************************************************************************/
+/***************************************************************************************************************************/
+
+
+/*******************************************************************/
+/*************** START: HEADER SECTION - ABOUT PAGE ****************/
+/*******************************************************************/
+
+.header .bg-about-image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.4))), url(../images/photos/about/bg-about-car-repair.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(../images/photos/about/bg-about-car-repair.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height:500px;
+}
+
+.header .bg-about-image {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.header .about-title {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 175px 20px  0;
+    background-color: transparent;
+}
+
+.header .about-details {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.15;
+}
+
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 768px) {
+    
+    .header .bg-about-image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/about/small-bg-about-car-repair.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/about/small-bg-about-car-repair.jpg);
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .header .about-title {
+    font-size: 41px;
+    width: 100%;
+    padding: 230px 10px 10px;
+    }
+
+    .header .about-details {
+    font-size: 30px;
+    padding: 0 10px;
+    }
+}
+
+/*****************************************************************/
+/*************** END: HEADER SECTION - ABOUT PAGE ****************/
+/*****************************************************************/
+
+
+
+/*******************************************************************/
+/************** START: ABOUT US SECTION - ABOUT PAGE ***************/
+/*******************************************************************/
+
+.about-us {
+  margin-top: 435px;
+  padding-top: 75px;
+  padding-bottom: 80px;
+}
+
+
+/** About Us Title **/
+
+.about-us .title {
+   font-size: 30px;
+   font-weight: bold;
+   margin-top: -7px;
+   
+}
+
+.about-us .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #34495e;
+   margin-top: 16px;
+}
+
+.about-us h2 {
+    margin-bottom: 28px; 
+}
+
+/** About Us Description **/
+
+.about-us p {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.about-us .btn-default {
+    color: #fff;
+    background-color: #34495e;
+    border-color: transparent;
+    border-radius: 0;
+    margin-top: 10px;
+}
+
+.about-us .btn {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+    border: 2px solid transparent;
+    border-radius: 0;
+}
+
+.about-us .btn:hover {
+    color: #34495e;
+    background-color: #fff;
+    border: 2px solid #34495e; 
+}
+
+/** POPUP - WHO WE ARE READ MORE CONTENT **/
+
+.about-us .lity-popup {
+  background: #fff;
+  max-width: 700px; 
+}
+
+.about-us .lity-popup img {
+    width: 100%;
+}
+
+
+.about-us .lity-popup P {
+   padding: 10px;
+   font-size: 16px;
+   line-height: 150%;
+}
+
+
+/*************** MEDIA QUERIES FOR THE WHO WE ARE SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    .about-us  {
+      margin-top: 420px;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+   .about-us  .btn {
+     margin-bottom: 25px;
+   }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .about-us   .title {
+       font-size: 25px;
+    }
+
+    .about-us   .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+}
+
+/*****************************************************************/
+/************** END: ABOUT US SECTION - ABOUT PAGE ***************/
+/*****************************************************************/
+
+
+/*********************************************************************************/
+/************** START: SOME INTERESTING FACTS SECTION - ABOUT PAGE ***************/
+/*********************************************************************************/
+
+.some-interesting-facts {
+   background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/about/bg-some-interesting-facts.jpg);
+   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/about/bg-some-interesting-facts.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   height: 360px;
+   color: #fff;
+}
+
+.some-interesting-facts {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 115px  0;
+    line-height: 150%;
+}
+
+.some-interesting-facts  span {
+    font-size: 50px;
+}
+
+.some-interesting-facts .interesting-facts {
+    padding-bottom: 25px;
+}
+
+
+/*************** MEDIA QUERIES FOR THE SOME INTERESTING FACTS SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 767px) {
+    .some-interesting-facts {
+       background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/about/small-bg-some-interesting-facts.jpg);
+       background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/about/small-bg-some-interesting-facts.jpg); 
+       height: 700px;
+    }
+    
+    .some-interesting-facts {
+       padding: 85px  0   0;
+    }
+    
+    .some-interesting-facts  .col-sm-4  {
+       padding-bottom: 50px;
+    }
+
+}
+
+/*******************************************************************************/
+/************** END: SOME INTERESTING FACTS SECTION - ABOUT PAGE ***************/
+/*******************************************************************************/
+
+
+/***************************************************************/
+/************** START: TEAM SECTION - ABOUT PAGE ***************/
+/***************************************************************/
+
+.team {
+   text-align: center;
+   padding-top: 75px;
+   padding-bottom: 35px;
+}
+
+/** Team Introduction **/
+
+.team .title {
+   font-size: 30px;
+   font-weight: bold;
+   margin-top: 0;
+   margin-bottom: 28px;
+}
+
+.team .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #34495e;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.team p {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 40px;
+}
+
+.team .col-md-3 p {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.team .col-md-3 p span {
+    font-size: 20px;
+    color: #34495e;
+}
+
+/*************** MEDIA QUERIES FOR THE TEAM SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 480px) {
+    
+    .team  .title {
+       font-size: 25px;
+    }
+
+    .team  .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    .team  .col-xs-6 {
+        width: 100%;
+    }
+    
+    .team img {
+        margin: 0 auto;
+    }
+    
+}
+
+/***************************************************************/
+/*************** END: TEAM SECTION - ABOUT PAGE ****************/
+/***************************************************************/
+
+
+/*****************************************************************************/
+/************** START: QUALITY OF SERVICE SECTION - ABOUT PAGE ***************/
+/*****************************************************************************/
+
+.quality-of-service {
+   background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/about/bg-quality-of-service.jpg);
+   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/about/bg-quality-of-service.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 360px;
+   color: #fff;
+   text-align: center;
+}
+
+.quality-of-service p {
+    font-size: 20px;
+    text-align: center;
+    padding: 70px 10px 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 150%;  
+}
+
+.quality-of-service .view-our-services a  {
+    padding: 15px  25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0;
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid #fff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.quality-of-service .view-our-services a:hover {
+   background-color: #fff;
+   color: #34495e;
+   border: 3px solid #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE QUALITY OF SERVICE SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 768px) {
+   .quality-of-service {
+     background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/about/small-bg-quality-of-service.jpg);
+     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/about/small-bg-quality-of-service.jpg); 
+   }
+
+}
+
+@media only screen and (max-width: 735px) {
+   .quality-of-service p {
+        font-size: 18px;
+        text-align: center;
+        padding: 70px 10px 45px;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 150%; 
+    }
+}
+
+@media only screen and (max-width: 548px) {
+   .quality-of-service p {
+        font-size: 20px; 
+    }
+    
+    .quality-of-service p span {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+   .quality-of-service p {
+        font-size: 18px; 
+        padding: 70px 10px 40px;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+   .quality-of-service p {
+        font-size: 16px;
+    }
+    
+    .quality-of-service .view-our-services a  {
+        font-size: 16px;
+        padding: 15px  25px;
+        
+    }
+}
+
+@media only screen and (max-width: 294px) {
+   .quality-of-service p {
+        padding: 50px 10px 30px;
+    }
+}
+
+/***************************************************************************/
+/************** END: QUALITY OF SERVICE SECTION - ABOUT PAGE ***************/
+/***************************************************************************/
+
+
+/*********************************************************************************************************************/
+/*********************************************************************************************************************/
+/*********************************************************************************************************************/
+/************************************************ END: ABOUT PAGE ****************************************************/
+/*********************************************************************************************************************/
+/*********************************************************************************************************************/
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************ START: SERVICES PAGE ****************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+/**********************************************************************/
+/*************** START: HEADER SECTION - SERVICES PAGE ****************/
+/**********************************************************************/
+
+.header .bg-services-image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.4))), url(../images/photos/services/bg-services-page.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(../images/photos/services/bg-services-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+
+#header-services {
+    z-index: 1;
+	position: relative;
+}
+
+
+.header .bg-services-image {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.header .services-title {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 175px 20px  0;
+    background-color: transparent;
+}
+
+.header .services-details {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.15;
+}
+
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - SERVICES PAGE ****************/
+
+@media only screen and (max-width: 768px) {
+    
+    .header .bg-services-image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/services/small-bg-services-page.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/services/small-bg-services-page.jpg);
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .header .services-title {
+    font-size: 41px;
+    width: 100%;
+    padding: 230px 10px 10px;
+    }
+
+    .header .services-details {
+    font-size: 30px;
+    padding: 0 10px;
+    }
+}
+
+/*******************************************************************/
+/*************** END: HEADER SECTION - SEVICES PAGE ****************/
+/*******************************************************************/
+
+
+/*********************************************************************/
+/************** START: SERVICES SECTION - SERIVES PAGE ***************/
+/*********************************************************************/
+
+.services-page  {
+   margin-top: 430px;
+}
+
+.services-page .container {
+   text-align: center;
+   padding-top: 75px;
+}
+
+/** Services Introduction **/
+
+.services-page .title {
+   font-size: 30px;
+   font-weight: bold;
+   margin-top: 0;
+   margin-bottom: 28px;
+}
+
+.services-page .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #34495e;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.services-page p {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 30px;
+}
+
+/** Services Details **/
+
+.services-page .service-summary {
+   float: left;
+   background-color: #34495e;
+   color: #fff;
+   width: 50%;
+   height: 550px;
+   padding: 115px   10px   0;
+   text-align: center;
+}
+
+
+/** Services Details Title **/
+
+.services-page .service-summary .title {
+   font-size: 30px;
+   margin-bottom: 40px; 
+}
+
+/** Services Details Description **/
+
+.services-page .service-summary p {
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 580px;
+    margin: 0 auto;
+   
+}
+
+.services-page .service-summary .btn-default {
+    color: #34495e;
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 0;
+    margin-top: 60px;
+}
+
+.services-page .service-summary .btn {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+    border: 2px solid transparent;
+    border-radius: 0;
+}
+
+.services-page .service-summary .btn:hover {
+    color: #fff;
+    background-color: #34495e;
+    border: 2px solid #fff; 
+}
+
+.services-page .service-image1,
+.services-page .service-image2, 
+.services-page .service-image3, 
+.services-page .service-image4, 
+.services-page .service-image5, 
+.services-page .service-image6 {
+   float: left;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top center;
+   background-color: #34495e;
+   width: 50%;
+   height: 550px;
+}
+
+.services-page .service-image1 {
+   background-image: url(../images/photos/services/bg-mot-testing.jpg);
+}
+
+.services-page .service-image2 {
+   background-image: url(../images/photos/services/bg-repairs.jpg);
+}
+
+.services-page .service-image3 {
+   background-image: url(../images/photos/services/bg-maintenance.jpg);
+}
+
+.services-page .service-image4 {
+   background-image: url(../images/photos/services/bg-servicing.jpg);
+}
+
+.services-page .service-image5 {
+   background-image: url(../images/photos/services/bg-auto-body-repair.jpg);
+}
+
+.services-page .service-image6 {
+   background-image: url(../images/photos/services/bg-tire-repair.jpg);
+}
+
+
+/*************** MEDIA QUERIES FOR THE SERVICES SECTION - SERVICES PAGE ****************/
+
+@media only screen and (max-width: 800px) {
+ 
+     .services-page .service-summary {
+      padding: 71px   2%   0;
+     }
+}
+
+
+
+@media only screen and (max-width: 680px) {
+   
+    .services-page .service-summary {
+       float: none;
+       width: 100%;
+       height: auto;
+       padding: 71px   10px   60px;
+    } 
+    
+    .services-page .service-summary .title {
+       margin-bottom: 18px; 
+    }
+    
+    
+    .services-page .service-image1,
+    .services-page .service-image2, 
+    .services-page .service-image3,
+    .services-page .service-image4, 
+    .services-page .service-image5, 
+    .services-page .service-image6 {
+       float: none;
+       width: 100%;
+       height: 550px;
+    }
+    
+    /** Using Flex Blox in order to display properly the elements **/
+    .services-page {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .services-page #flex-display1 {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    
+    .services-page #flex-display2 {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3;
+    }
+    
+    .services-page #flex-display3 {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+    
+    .services-page #flex-display4 {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+        order: 4;
+    }
+    
+    .services-page #flex-display5 {
+        -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+        order: 5;
+    }
+    
+    .services-page #flex-display6 {
+        -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+        order: 6;
+    }
+    
+    .services-page #flex-display7 {
+        -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+        order: 8;
+    }
+    
+    .services-page #flex-display8 {
+        -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+        order: 7;
+    }
+    
+    .services-page #flex-display9 {
+        -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+        order: 9;
+    }
+    
+    .services-page #flex-display10 {
+        -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+        order: 10;
+    }
+    
+    .services-page #flex-display11 {
+        -webkit-box-ordinal-group: 13;
+        -ms-flex-order: 12;
+        order: 12;
+    }
+    
+    .services-page #flex-display12 {
+        -webkit-box-ordinal-group: 12;
+        -ms-flex-order: 11;
+        order: 11;
+    }
+    
+    .services-page #flex-display13 {
+        -webkit-box-ordinal-group: 14;
+        -ms-flex-order: 13;
+        order: 13;
+    }
+    
+    .services-page #flex-display14 {
+        -webkit-box-ordinal-group: 15;
+        -ms-flex-order: 14;
+        order: 14;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    
+     .services-page .service-summary .title {
+       font-size: 25px;
+     }
+
+}
+ 
+@media only screen and (max-width: 480px) {
+    
+    .services-page  .title {
+       font-size: 25px;
+    }
+
+    .services-page  .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+
+}
+
+
+/********************************************************************/
+/************** END: SERVICES SECTION - SERVICES PAGE ***************/
+/********************************************************************/
+
+
+
+/**************************************************************************/
+/************** START: GET IN TOUCH SECTION - SERVICES PAGE ***************/
+/**************************************************************************/
+
+.get-in-touch-services-page .container {
+   text-align: center;
+   padding-top: 80px;
+   padding-bottom: 80px;
+}
+
+
+.get-in-touch-services-page .get-in-touch a  {
+    padding: 15px  25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0;
+    color: #fff;
+    background-color: #34495e;
+    border: 3px solid transparent;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.get-in-touch-services-page .get-in-touch a:hover {
+   background-color: #fff;
+   color: #34495e;
+   border: 3px solid #34495e;
+}
+
+/************************************************************************/
+/************** END: GET IN TOUCH SECTION - SERVICES PAGE ***************/
+/************************************************************************/
+
+
+/*****************************************************************************/
+/************** START: REGULAR SERVICE SECTION - SERVICES PAGE ***************/
+/*****************************************************************************/
+
+.regular-service {
+   background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/services/bg-regular-service.jpg);
+   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/services/bg-regular-service.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 360px;
+   color: #fff;
+}
+
+
+.regular-service p {
+    font-size: 24px;
+    text-align: center;
+    padding: 135px 10px 120px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 150%;
+   
+}
+
+
+/*************** MEDIA QUERIES FOR THE REGULAR SERVICE SECTION - SERVICES PAGE ****************/
+
+@media only screen and (max-width: 768px) {
+   .regular-service {
+     background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/services/small-bg-regular-service.jpg);
+     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/services/small-bg-regular-service.jpg); 
+   }
+
+}
+
+@media only screen and (max-width: 580px) {
+   .regular-service p {
+       font-size: 20px;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+   .regular-service p {
+      padding: 125px 10px 80px;
+   }
+}
+
+@media only screen and (max-width: 320px) {
+   .regular-service p {
+      font-size: 16px;
+   }
+}
+
+/***************************************************************************/
+/************** END: REGULAR SERVICE SECTION - SERVICES PAGE ***************/
+/***************************************************************************/
+
+
+/************************************************************************************************************************/
+/************************************************************************************************************************/
+/************************************************************************************************************************/
+/************************************************ END: SERVICES PAGE ****************************************************/
+/************************************************************************************************************************/
+/************************************************************************************************************************/
+/************************************************************************************************************************/
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************ START: CONTACT PAGE *****************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+/*********************************************************************/
+/*************** START: HEADER SECTION - CONTACT PAGE ****************/
+/*********************************************************************/
+
+.header .bg-contact-image {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.4))), url(../images/photos/contact/bg-contact-car-repair.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(../images/photos/contact/bg-contact-car-repair.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height:500px;
+}
+
+.header .bg-contact-image {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.header .contact-title {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 175px 20px  0;
+    background-color: transparent;
+}
+
+.header .contact-details {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.15;
+}
+
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - CONTACT PAGE ****************/
+
+@media only screen and (max-width: 768px) {
+    
+    .header .bg-contact-image {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/contact/small-bg-contact-car-repair.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/contact/small-bg-contact-car-repair.jpg);
+        background-position: top left;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .header .contact-title {
+    font-size: 41px;
+    width: 100%;
+    padding: 230px 10px 10px;
+    }
+
+    .header .contact-details {
+    font-size: 30px;
+    padding: 0 10px;
+    }
+}
+
+/*******************************************************************/
+/*************** END: HEADER SECTION - CONTACT PAGE ****************/
+/*******************************************************************/
+
+
+/***********************************************************************/
+/************** START: CONTACT US SECTION - CONTACT PAGE ***************/
+/***********************************************************************/
+
+.contact-page  {
+   margin-top: 430px;
+   margin-bottom: 70px;
+}
+
+.contact-page .container {
+   text-align: center;
+   padding-top: 75px;
+}
+
+/** COntact Us Introduction **/
+
+.contact-page .title {
+   font-size: 30px;
+   font-weight: bold;
+   margin-top: 0;
+   margin-bottom: 28px;
+}
+
+.contact-page .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #34495e;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.contact-page p {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 50px;
+}
+
+
+/** Contact Detail Icons **/
+.contact-page #location {
+    background-image: url(../images/icons/location.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 20px 0 40px 80px;
+}
+
+.contact-page #telephone {
+    background-image: url(../images/icons/telephone.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 15px 0 40px 80px;
+}
+
+.contact-page #mail {
+    background-image: url(../images/icons/email.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 15px 0 40px 80px;
+}
+
+.contact-page #opening-hours {
+    background-image: url(../images/icons/opening-hours.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 0  0 40px 80px;
+}
+
+.contact-page .col-sm-6 .details {
+    text-align: left;
+    font-size: 16px;
+}
+
+/** Contact FORM **/
+
+.contact-page input[type=text],
+.contact-page input[type=tel],
+.contact-page input[type=email],
+.contact-page textarea {
+    padding: 20px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 16px;
+}
+
+.contact-page textarea {
+    width: 100%;
+    height: 200px;
+    color: #636363;
+}
+
+.contact-page  .form-control {
+    height: auto;
+    border-radius: 0;
+    color: #636363;
+}
+
+.contact-page input[type=submit] {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #34495e;
+    padding: 18px;
+    border: 3px solid transparent;
+    width: 150px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.contact-page input[type=submit]:hover {
+   background-color: #fff;
+   color: #34495e;
+   border: 3px solid #34495e;
+}
+
+
+/*************** MEDIA QUERIES FOR THE CONTACT SECTION - CONTACT PAGE ****************/
+
+
+@media only screen and (max-width: 767px) {
+    
+    /** Contact Detail Icons **/
+    .contact-page #location {
+        background-position: top center;
+        padding: 60px 0 40px;
+    }
+
+    .contact-page #telephone {
+        background-position: top center;
+        padding: 60px 0 40px;
+    }
+
+    .contact-page #mail {
+        background-position: top center;
+        padding: 60px 0  40px;
+    }
+    
+    .contact-page #opening-hours {
+        background-position: top center;
+        padding: 60px 0  0;
+    }
+    
+    .contact-page .col-sm-6 .details {
+        text-align: center;
+    }
+    
+    
+    .contact-page input[type=submit] {
+        width: auto;
+    }
+}
+
+/*********************************************************************/
+/************** END: CONTACT US SECTION - CONTACT PAGE ***************/
+/*********************************************************************/
+
+
+
+/****************************************************/
+/*************** START: MAP SECTION *****************/
+/****************************************************/
+
+#map {
+    width: 100%;
+    height: 532px;
+    background-color: #34495e;
+}
+
+@media only screen and (max-width: 320px) {
+    #map {
+        margin-top: 41px;
+    }
+   
+}
+
+/******************************************************/
+/***************** END: MAP SECTION *******************/
+/******************************************************/
+
+
+
+
+
+/******************************************************************************/
+/******************* START: Customising The SLICK Plugin  *********************/
+/******************************************************************************/
+
+/** Dots **/
+
+.slick-dots {
+    bottom: 25px;
+}
+
+.slick-dots li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.slick-dots li.slick-active {
+  background: #fff;
+  cursor: default;
+}
+
+
+/** Arrows **/
+
+.slick-prev {
+    left: 25px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 25px;
+
+}
+
+  
+/******************************************************************************/
+/******************** END: Customising The SLICK Plugin  **********************/
+/******************************************************************************/
+
+
+
+
+/*****************************************************************************************/
+/******************* START: Customising The jQuery Validation Plugin *********************/
+/*****************************************************************************************/
+
+.contact-page .comment-form  label.error {
+    color: #e74c3c;
+}
+
+.contact-page .comment-form   input.error, 
+.contact-page .comment-form   textarea.error {
+    border: 2px solid #e74c3c;
+    outline: none;
+}
+
+
+/***************************************************************************************/
+/******************* END: Customising The jQuery Validation Plugin *********************/
+/***************************************************************************************/
+
+
+
+/*******************************************************************/
+/******************* Hidding Elements On Slide *********************/
+/*******************************************************************/
+
+.js-hidden  {
+    visibility: hidden;
+}
+
+/****************************************************************/
+/******************* END: Elements On Slide *********************/
+/****************************************************************/
+
+
+
